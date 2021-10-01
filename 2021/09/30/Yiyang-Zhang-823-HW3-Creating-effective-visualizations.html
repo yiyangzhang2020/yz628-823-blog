@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>823hw3 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="823hw3" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://yiyangzhang2020.github.io/yz628-823-blog/2021/09/30/Yiyang-Zhang-823-HW3-Creating-effective-visualizations.html" />
+<meta property="og:url" content="https://yiyangzhang2020.github.io/yz628-823-blog/2021/09/30/Yiyang-Zhang-823-HW3-Creating-effective-visualizations.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-30T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-09-30T00:00:00-05:00","url":"https://yiyangzhang2020.github.io/yz628-823-blog/2021/09/30/Yiyang-Zhang-823-HW3-Creating-effective-visualizations.html","@type":"BlogPosting","headline":"823hw3","dateModified":"2021-09-30T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://yiyangzhang2020.github.io/yz628-823-blog/2021/09/30/Yiyang-Zhang-823-HW3-Creating-effective-visualizations.html"},"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/yz628-823-blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yiyangzhang2020.github.io/yz628-823-blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/yz628-823-blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/yz628-823-blog/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/yz628-823-blog/about/">About Me</a><a class="page-link" href="/yz628-823-blog/search/">Search</a><a class="page-link" href="/yz628-823-blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">823hw3</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-30T00:00:00-05:00" itemprop="datePublished">
+        Sep 30, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/yiyangzhang2020/yz628-823-blog/tree/master/_notebooks/2021-09-30-Yiyang-Zhang-823-HW3- Creating effective visualizations.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/yz628-823-blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/yiyangzhang2020/yz628-823-blog/master?filepath=_notebooks%2F2021-09-30-Yiyang-Zhang-823-HW3-+Creating+effective+visualizations.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/yz628-823-blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/yiyangzhang2020/yz628-823-blog/blob/master/_notebooks/2021-09-30-Yiyang-Zhang-823-HW3- Creating effective visualizations.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/yz628-823-blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-09-30-Yiyang-Zhang-823-HW3- Creating effective visualizations.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Creating-effective-visualizations-using-best-practices:">Creating effective visualizations using best practices:<a class="anchor-link" href="#Creating-effective-visualizations-using-best-practices:"> </a></h1><h3 id="Create-3-informative-visualizations-about-malaria-using-Python-in-a-Jupyter-notebook,-starting-with-the-data-sets-at-https://github.com/rfordatascience/tidytuesday/tree/master/data/2018/2018-11-13.">Create 3 informative visualizations about malaria using Python in a Jupyter notebook, starting with the data sets at <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2018/2018-11-13">https://github.com/rfordatascience/tidytuesday/tree/master/data/2018/2018-11-13</a>.<a class="anchor-link" href="#Create-3-informative-visualizations-about-malaria-using-Python-in-a-Jupyter-notebook,-starting-with-the-data-sets-at-https://github.com/rfordatascience/tidytuesday/tree/master/data/2018/2018-11-13."> </a></h3><h3 id="Where-appropriate,-make-the-visualizations-interactive.">Where appropriate, make the visualizations interactive.<a class="anchor-link" href="#Where-appropriate,-make-the-visualizations-interactive."> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="We-have-three-original-datasets:-malaria_deaths.csv,-malaria_deaths_age.csv,-malaria_inc.csv.">We have three original datasets: malaria_deaths.csv, malaria_deaths_age.csv, malaria_inc.csv.<a class="anchor-link" href="#We-have-three-original-datasets:-malaria_deaths.csv,-malaria_deaths_age.csv,-malaria_inc.csv."> </a></h3><h3 id="The-malaria_deaths-dataset-includes-Entity,-Code,-Year-and-Deaths(per-100,000)">The malaria_deaths dataset includes Entity, Code, Year and Deaths(per 100,000)<a class="anchor-link" href="#The-malaria_deaths-dataset-includes-Entity,-Code,-Year-and-Deaths(per-100,000)"> </a></h3><h3 id="The-malaria_deaths_age-includes-entity,-code,-year,age_group-and-death(total-count)">The malaria_deaths_age includes entity, code, year,age_group and death(total count)<a class="anchor-link" href="#The-malaria_deaths_age-includes-entity,-code,-year,age_group-and-death(total-count)"> </a></h3><h3 id="The-malaria_inc-includes-Entity,-Code,-Year-and-Incidence-of-malaria-(per-1,000-population-at-risk)">The malaria_inc includes Entity, Code, Year and Incidence of malaria (per 1,000 population at risk)<a class="anchor-link" href="#The-malaria_inc-includes-Entity,-Code,-Year-and-Incidence-of-malaria-(per-1,000-population-at-risk)"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="After-all-three-dataset-have-been-read-in-and-checked,-I-find-myself-particularly-interested-in-seeing-how-the-incidence-changes-within-the-most-populated-countires-over-the-years.">After all three dataset have been read in and checked, I find myself particularly interested in seeing how the incidence changes within the most populated countires over the years.<a class="anchor-link" href="#After-all-three-dataset-have-been-read-in-and-checked,-I-find-myself-particularly-interested-in-seeing-how-the-incidence-changes-within-the-most-populated-countires-over-the-years."> </a></h3><h3 id="So-I-looked-up-the-list-of-populations-per-country-and-then-chose-10-countries-with-most-population-that-exist-in-the-malaria_inc.csv-dataset.">So I looked up the list of populations per country and then chose 10 countries with most population that exist in the malaria_inc.csv dataset.<a class="anchor-link" href="#So-I-looked-up-the-list-of-populations-per-country-and-then-chose-10-countries-with-most-population-that-exist-in-the-malaria_inc.csv-dataset."> </a></h3><h3 id="I-store-the-data-of-these-10-countries-in-popn_top10-using-pandas-concatenate-function.-After-that-I-renamed-a-column-that-has-a-very-long-and-complicated-name,-with-a-simple-descriptive-name.">I store the data of these 10 countries in popn_top10 using pandas concatenate function. After that I renamed a column that has a very long and complicated name, with a simple descriptive name.<a class="anchor-link" href="#I-store-the-data-of-these-10-countries-in-popn_top10-using-pandas-concatenate-function.-After-that-I-renamed-a-column-that-has-a-very-long-and-complicated-name,-with-a-simple-descriptive-name."> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">malaria_deaths</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;malaria_deaths.csv&quot;</span><span class="p">)</span>
+<span class="n">malaria_deaths_age</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;malaria_deaths_age.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">malaria_inc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;malaria_inc.csv&quot;</span><span class="p">)</span>
+<span class="n">malaria_deaths_age</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;entity&#39;</span><span class="p">:</span><span class="s1">&#39;Entity&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">:</span><span class="s1">&#39;Year&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">popn_top10</span> <span class="o">=</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;China&quot;</span><span class="p">],</span> 
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;India&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Brazil&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Indonesia&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Pakistan&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Nigeria&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Bangladesh&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Ethiopia&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Mexico&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Philippines&quot;</span><span class="p">],]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Check-how-this-dataframe-looks">Check how this dataframe looks<a class="anchor-link" href="#Check-how-this-dataframe-looks"> </a></h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">popn_top10</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Incidence of malaria (per 1,000 population at risk) (per 1,000 population at risk)&#39;</span><span class="p">:</span><span class="s1">&#39;Incidence&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">popn_top10</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Entity</th>
+      <th>Code</th>
+      <th>Year</th>
+      <th>Incidence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>332</th>
+      <td>Nigeria</td>
+      <td>NGA</td>
+      <td>2000</td>
+      <td>497.800000</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>China</td>
+      <td>CHN</td>
+      <td>2015</td>
+      <td>0.000159</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>Pakistan</td>
+      <td>PAK</td>
+      <td>2000</td>
+      <td>44.800000</td>
+    </tr>
+    <tr>
+      <th>223</th>
+      <td>Indonesia</td>
+      <td>IDN</td>
+      <td>2015</td>
+      <td>26.100000</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Bangladesh</td>
+      <td>BGD</td>
+      <td>2010</td>
+      <td>8.600000</td>
+    </tr>
+    <tr>
+      <th>343</th>
+      <td>Pakistan</td>
+      <td>PAK</td>
+      <td>2015</td>
+      <td>8.600000</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>Ethiopia</td>
+      <td>ETH</td>
+      <td>2010</td>
+      <td>106.200000</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Brazil</td>
+      <td>BRA</td>
+      <td>2005</td>
+      <td>38.700000</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>Ethiopia</td>
+      <td>ETH</td>
+      <td>2015</td>
+      <td>58.600000</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Bangladesh</td>
+      <td>BGD</td>
+      <td>2005</td>
+      <td>12.600000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="After-checking-the-dataframe,-I-decided-to-show-an-interactive-barplot-of-how-the-incidence-of-malaria-change-in-these-most-populated-countries-over-the-years.">After checking the dataframe, I decided to show an interactive barplot of how the incidence of malaria change in these most populated countries over the years.<a class="anchor-link" href="#After-checking-the-dataframe,-I-decided-to-show-an-interactive-barplot-of-how-the-incidence-of-malaria-change-in-these-most-populated-countries-over-the-years."> </a></h3><h3 id="The-time-interval-is-5-years-so-we-will-see-data-from-2000,2005,2010-and-2015">The time interval is 5 years so we will see data from 2000,2005,2010 and 2015<a class="anchor-link" href="#The-time-interval-is-5-years-so-we-will-see-data-from-2000,2005,2010-and-2015"> </a></h3><h3 id="Feel-free-to-zoom-in-to-the-plot-and-play-with-it.">Feel free to zoom in to the plot and play with it.<a class="anchor-link" href="#Feel-free-to-zoom-in-to-the-plot-and-play-with-it."> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig1</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">popn_top10</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Incidence&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Entity&#39;</span><span class="p">,</span> 
+             <span class="n">color_discrete_sequence</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#2ca02c&#39;</span><span class="p">,</span><span class="s1">&#39;#d62728&#39;</span><span class="p">,</span><span class="s1">&#39;#9467bd&#39;</span><span class="p">,</span><span class="s1">&#39;#8c564b&#39;</span><span class="p">,</span><span class="s1">&#39;#e377c2&#39;</span><span class="p">,</span><span class="s1">&#39;#1f77b4&#39;</span><span class="p">,</span><span class="s1">&#39;#ff7f0e&#39;</span><span class="p">,</span><span class="s1">&#39;#7f7f7f&#39;</span><span class="p">,</span><span class="s1">&#39;#bcbd22&#39;</span><span class="p">,</span><span class="s1">&#39;#17becf&#39;</span><span class="p">],</span>
+             <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Incidence interactive plot of Malaria in top 10 most populated countries&#39;</span><span class="p">)</span>
+<span class="n">fig1</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+        
+        
+            <div id="4860990c-34cb-4a83-8f4d-46ecfca7a4d8" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                require(["plotly"], function(Plotly) {
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("4860990c-34cb-4a83-8f4d-46ecfca7a4d8")) {
+                    Plotly.newPlot(
+                        '4860990c-34cb-4a83-8f4d-46ecfca7a4d8',
+                        [{"alignmentgroup": "True", "hovertemplate": "Entity=China<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "China", "marker": {"color": "#2ca02c"}, "name": "China", "offsetgroup": "China", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [0.1, 0.1, 0.0208272052376093, 0.000158545166126994], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "Entity=India<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "India", "marker": {"color": "#d62728"}, "name": "India", "offsetgroup": "India", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [42.7, 48.1, 33.1, 18.6], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "Entity=Brazil<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Brazil", "marker": {"color": "#9467bd"}, "name": "Brazil", "offsetgroup": "Brazil", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [62.6, 38.7, 19.4, 7.9], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "Entity=Indonesia<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Indonesia", "marker": {"color": "#8c564b"}, "name": "Indonesia", "offsetgroup": "Indonesia", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [99.0, 119.1, 129.2, 26.1], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "Entity=Pakistan<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Pakistan", "marker": {"color": "#e377c2"}, "name": "Pakistan", "offsetgroup": "Pakistan", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [44.8, 40.3, 13.8, 8.6], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "Entity=Nigeria<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Nigeria", "marker": {"color": "#1f77b4"}, "name": "Nigeria", "offsetgroup": "Nigeria", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [497.8, 482.6, 416.3, 380.8], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "Entity=Bangladesh<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Bangladesh", "marker": {"color": "#ff7f0e"}, "name": "Bangladesh", "offsetgroup": "Bangladesh", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [12.5, 12.6, 8.6, 0.8], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "Entity=Ethiopia<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Ethiopia", "marker": {"color": "#7f7f7f"}, "name": "Ethiopia", "offsetgroup": "Ethiopia", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [662.3, 130.5, 106.2, 58.6], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "Entity=Mexico<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Mexico", "marker": {"color": "#bcbd22"}, "name": "Mexico", "offsetgroup": "Mexico", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [4.0, 1.5, 0.6, 0.2], "yaxis": "y"}, {"alignmentgroup": "True", "hovertemplate": "Entity=Philippines<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Philippines", "marker": {"color": "#17becf"}, "name": "Philippines", "offsetgroup": "Philippines", "orientation": "v", "showlegend": true, "textposition": "auto", "type": "bar", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [4.3, 4.9, 1.7, 0.4], "yaxis": "y"}],
+                        {"barmode": "relative", "legend": {"title": {"text": "Entity"}, "tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"text": "Incidence interactive plot of Malaria in top 10 most populated countries"}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "Year"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "Incidence"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('4860990c-34cb-4a83-8f4d-46ecfca7a4d8');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                });
+            </script>
+        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="After-seeing-the-interactive-barplot,-I-think-adding-a-scatter-plot-will-give-people-a-more-complete-look-on-the-trend-of-how-incidence-changes-over-the-years.">After seeing the interactive barplot, I think adding a scatter plot will give people a more complete look on the trend of how incidence changes over the years.<a class="anchor-link" href="#After-seeing-the-interactive-barplot,-I-think-adding-a-scatter-plot-will-give-people-a-more-complete-look-on-the-trend-of-how-incidence-changes-over-the-years."> </a></h3><h3 id="Hence-I-did-a-scatter-plot-of-the-same-dataset-and-added-a-linear-trendline-for-each-country.">Hence I did a scatter plot of the same dataset and added a linear trendline for each country.<a class="anchor-link" href="#Hence-I-did-a-scatter-plot-of-the-same-dataset-and-added-a-linear-trendline-for-each-country."> </a></h3><h3 id="Feel-free-to-zoom-in-to-the-plot-and-play-with-it.">Feel free to zoom in to the plot and play with it.<a class="anchor-link" href="#Feel-free-to-zoom-in-to-the-plot-and-play-with-it."> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig2</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">popn_top10</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Incidence&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Entity&#39;</span><span class="p">,</span> <span class="n">color_discrete_sequence</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#2ca02c&#39;</span><span class="p">,</span><span class="s1">&#39;#d62728&#39;</span><span class="p">,</span><span class="s1">&#39;#9467bd&#39;</span><span class="p">,</span><span class="s1">&#39;#8c564b&#39;</span><span class="p">,</span><span class="s1">&#39;#e377c2&#39;</span><span class="p">,</span><span class="s1">&#39;#1f77b4&#39;</span><span class="p">,</span><span class="s1">&#39;#ff7f0e&#39;</span><span class="p">,</span><span class="s1">&#39;#7f7f7f&#39;</span><span class="p">,</span><span class="s1">&#39;#bcbd22&#39;</span><span class="p">,</span><span class="s1">&#39;#17becf&#39;</span><span class="p">],</span><span class="n">trendline</span> <span class="o">=</span> <span class="s2">&quot;ols&quot;</span><span class="p">,</span>
+             <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Incidence interactive plot of Malaria in top 10 most populated countries&#39;</span><span class="p">)</span>
+<span class="n">fig2</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+        
+        
+            <div id="94b488a8-096a-432d-bdee-7e4b44e58d78" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                require(["plotly"], function(Plotly) {
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("94b488a8-096a-432d-bdee-7e4b44e58d78")) {
+                    Plotly.newPlot(
+                        '94b488a8-096a-432d-bdee-7e4b44e58d78',
+                        [{"hovertemplate": "Entity=China<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "China", "marker": {"color": "#2ca02c", "symbol": "circle"}, "mode": "markers", "name": "China", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [0.1, 0.1, 0.0208272052376093, 0.000158545166126994], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -0.00757394 * Year + 15.2599<br>R<sup>2</sup>=0.871790<br><br>Entity=China<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "China", "marker": {"color": "#2ca02c", "symbol": "circle"}, "mode": "lines", "name": "China", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [0.1120510114905322, 0.07418129556413078, 0.03631157963773113, -0.0015581362886685213], "yaxis": "y"}, {"hovertemplate": "Entity=India<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "India", "marker": {"color": "#d62728", "symbol": "circle"}, "mode": "markers", "name": "India", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [42.7, 48.1, 33.1, 18.6], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -1.746 * Year + 3540.72<br>R<sup>2</sup>=0.759233<br><br>Entity=India<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "India", "marker": {"color": "#d62728", "symbol": "circle"}, "mode": "lines", "name": "India", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [48.71999999999889, 39.98999999999933, 31.25999999999931, 22.529999999999745], "yaxis": "y"}, {"hovertemplate": "Entity=Brazil<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Brazil", "marker": {"color": "#9467bd", "symbol": "circle"}, "mode": "markers", "name": "Brazil", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [62.6, 38.7, 19.4, 7.9], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -3.668 * Year + 7395.66<br>R<sup>2</sup>=0.977363<br><br>Entity=Brazil<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "Brazil", "marker": {"color": "#9467bd", "symbol": "circle"}, "mode": "lines", "name": "Brazil", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [59.659999999999854, 41.32000000000062, 22.980000000000473, 4.640000000001237], "yaxis": "y"}, {"hovertemplate": "Entity=Indonesia<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Indonesia", "marker": {"color": "#8c564b", "symbol": "circle"}, "mode": "markers", "name": "Indonesia", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [99.0, 119.1, 129.2, 26.1], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -4.172 * Year + 8468.64<br>R<sup>2</sup>=0.334580<br><br>Entity=Indonesia<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "Indonesia", "marker": {"color": "#8c564b", "symbol": "circle"}, "mode": "lines", "name": "Indonesia", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [124.63999999999942, 103.77999999999884, 82.92000000000007, 62.05999999999949], "yaxis": "y"}, {"hovertemplate": "Entity=Pakistan<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Pakistan", "marker": {"color": "#e377c2", "symbol": "circle"}, "mode": "markers", "name": "Pakistan", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [44.8, 40.3, 13.8, 8.6], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -2.702 * Year + 5451.14<br>R<sup>2</sup>=0.906736<br><br>Entity=Pakistan<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "Pakistan", "marker": {"color": "#e377c2", "symbol": "circle"}, "mode": "lines", "name": "Pakistan", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [47.13999999999851, 33.62999999999829, 20.11999999999898, 6.609999999998763], "yaxis": "y"}, {"hovertemplate": "Entity=Nigeria<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Nigeria", "marker": {"color": "#1f77b4", "symbol": "circle"}, "mode": "markers", "name": "Nigeria", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [497.8, 482.6, 416.3, 380.8], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -8.346 * Year + 17199<br>R<sup>2</sup>=0.952063<br><br>Entity=Nigeria<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "Nigeria", "marker": {"color": "#1f77b4", "symbol": "circle"}, "mode": "lines", "name": "Nigeria", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [506.9700000000121, 465.2400000000125, 423.51000000001295, 381.7800000000134], "yaxis": "y"}, {"hovertemplate": "Entity=Bangladesh<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Bangladesh", "marker": {"color": "#ff7f0e", "symbol": "circle"}, "mode": "markers", "name": "Bangladesh", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [12.5, 12.6, 8.6, 0.8], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -0.782 * Year + 1578.49<br>R<sup>2</sup>=0.830446<br><br>Entity=Bangladesh<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "Bangladesh", "marker": {"color": "#ff7f0e", "symbol": "circle"}, "mode": "lines", "name": "Bangladesh", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [14.489999999999782, 10.5799999999997, 6.669999999999845, 2.759999999999991], "yaxis": "y"}, {"hovertemplate": "Entity=Ethiopia<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Ethiopia", "marker": {"color": "#7f7f7f", "symbol": "circle"}, "mode": "markers", "name": "Ethiopia", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [662.3, 130.5, 106.2, 58.6], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -36.708 * Year + 73930.7<br>R<sup>2</sup>=0.698509<br><br>Entity=Ethiopia<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "Ethiopia", "marker": {"color": "#7f7f7f", "symbol": "circle"}, "mode": "lines", "name": "Ethiopia", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [514.7099999999919, 331.16999999999825, 147.63000000000466, -35.91000000000349], "yaxis": "y"}, {"hovertemplate": "Entity=Mexico<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Mexico", "marker": {"color": "#bcbd22", "symbol": "circle"}, "mode": "markers", "name": "Mexico", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [4.0, 1.5, 0.6, 0.2], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -0.246 * Year + 495.42<br>R<sup>2</sup>=0.866743<br><br>Entity=Mexico<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "Mexico", "marker": {"color": "#bcbd22", "symbol": "circle"}, "mode": "lines", "name": "Mexico", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [3.4199999999999022, 2.189999999999941, 0.9599999999999227, -0.27000000000003865], "yaxis": "y"}, {"hovertemplate": "Entity=Philippines<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Philippines", "marker": {"color": "#17becf", "symbol": "circle"}, "mode": "markers", "name": "Philippines", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [4.3, 4.9, 1.7, 0.4], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -0.298 * Year + 601.06<br>R<sup>2</sup>=0.814566<br><br>Entity=Philippines<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "Philippines", "marker": {"color": "#17becf", "symbol": "circle"}, "mode": "lines", "name": "Philippines", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [5.059999999999718, 3.569999999999709, 2.0799999999998136, 0.5899999999998045], "yaxis": "y"}],
+                        {"legend": {"title": {"text": "Entity"}, "tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"text": "Incidence interactive plot of Malaria in top 10 most populated countries"}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "Year"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "Incidence"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('94b488a8-096a-432d-bdee-7e4b44e58d78');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                });
+            </script>
+        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Now-we-have-seen-how-the-malaria-incidence-changes-in-the-most-populated-countries-over-the-years,-but-what-about-continets-and-other-regions?">Now we have seen how the malaria incidence changes in the most populated countries over the years, but what about continets and other regions?<a class="anchor-link" href="#Now-we-have-seen-how-the-malaria-incidence-changes-in-the-most-populated-countries-over-the-years,-but-what-about-continets-and-other-regions?"> </a></h3><h3 id="From-the-dataset,-we-can-see-the-incidence-of-different-continents-and-region-that-are-also-very-informative.">From the dataset, we can see the incidence of different continents and region that are also very informative.<a class="anchor-link" href="#From-the-dataset,-we-can-see-the-incidence-of-different-continents-and-region-that-are-also-very-informative."> </a></h3><h3 id="I-picked-some-of-the-most-representative-continents-and-special-regions-to-redo-a-scatter-plot-with-trend-lines-to-see-how-malaria-incidence-changes-in-these-places.">I picked some of the most representative continents and special regions to redo a scatter plot with trend lines to see how malaria incidence changes in these places.<a class="anchor-link" href="#I-picked-some-of-the-most-representative-continents-and-special-regions-to-redo-a-scatter-plot-with-trend-lines-to-see-how-malaria-incidence-changes-in-these-places."> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">popn_cont_and_special</span> <span class="o">=</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Heavily indebted poor couuntries&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;East Asia &amp; Pacific&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Latin America &amp; Caribbean&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Sub-Saharan Africa&quot;</span><span class="p">],</span>
+                       <span class="n">malaria_inc</span><span class="p">[</span><span class="n">malaria_inc</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Fragile and conflict affected situations&quot;</span><span class="p">]])</span>
+           <span class="p">)</span>
+<span class="n">popn_cont_and_special</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Incidence of malaria (per 1,000 population at risk) (per 1,000 population at risk)&#39;</span><span class="p">:</span><span class="s1">&#39;Incidence&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">popn_cont_and_special</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Entity</th>
+      <th>Code</th>
+      <th>Year</th>
+      <th>Incidence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>250</th>
+      <td>Latin America &amp; Caribbean</td>
+      <td>NaN</td>
+      <td>2010</td>
+      <td>14.409069</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>East Asia &amp; Pacific</td>
+      <td>NaN</td>
+      <td>2000</td>
+      <td>22.736116</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>East Asia &amp; Pacific</td>
+      <td>NaN</td>
+      <td>2010</td>
+      <td>20.134525</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>Fragile and conflict affected situations</td>
+      <td>NaN</td>
+      <td>2000</td>
+      <td>319.032295</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>Latin America &amp; Caribbean</td>
+      <td>NaN</td>
+      <td>2005</td>
+      <td>25.144594</td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td>Fragile and conflict affected situations</td>
+      <td>NaN</td>
+      <td>2010</td>
+      <td>247.498298</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>Fragile and conflict affected situations</td>
+      <td>NaN</td>
+      <td>2005</td>
+      <td>304.801393</td>
+    </tr>
+    <tr>
+      <th>251</th>
+      <td>Latin America &amp; Caribbean</td>
+      <td>NaN</td>
+      <td>2015</td>
+      <td>10.026764</td>
+    </tr>
+    <tr>
+      <th>423</th>
+      <td>Sub-Saharan Africa</td>
+      <td>NaN</td>
+      <td>2015</td>
+      <td>234.292105</td>
+    </tr>
+    <tr>
+      <th>420</th>
+      <td>Sub-Saharan Africa</td>
+      <td>NaN</td>
+      <td>2000</td>
+      <td>422.510847</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Feel-free-to-zoom-in-to-the-plot-and-play-with-it.">Feel free to zoom in to the plot and play with it.<a class="anchor-link" href="#Feel-free-to-zoom-in-to-the-plot-and-play-with-it."> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig3</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">popn_cont_and_special</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Incidence&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Entity&#39;</span><span class="p">,</span> <span class="n">color_discrete_sequence</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#1f77b4&#39;</span><span class="p">,</span><span class="s1">&#39;#ff7f0e&#39;</span><span class="p">,</span><span class="s1">&#39;#7f7f7f&#39;</span><span class="p">,</span><span class="s1">&#39;#bcbd22&#39;</span><span class="p">,</span><span class="s1">&#39;#17becf&#39;</span><span class="p">],</span><span class="n">trendline</span> <span class="o">=</span> <span class="s2">&quot;ols&quot;</span><span class="p">,</span>
+             <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Incidence interactive plot of Malaria in different continents and special regions&#39;</span><span class="p">)</span>
+<span class="n">fig3</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+        
+        
+            <div id="67435dc2-1a40-4ff7-b19c-4dfa41ebb2d3" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                require(["plotly"], function(Plotly) {
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("67435dc2-1a40-4ff7-b19c-4dfa41ebb2d3")) {
+                    Plotly.newPlot(
+                        '67435dc2-1a40-4ff7-b19c-4dfa41ebb2d3',
+                        [{"hovertemplate": "Entity=East Asia & Pacific<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "East Asia & Pacific", "marker": {"color": "#1f77b4", "symbol": "circle"}, "mode": "markers", "name": "East Asia & Pacific", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [22.7361163118506, 20.663992336486498, 20.134525123501998, 5.703206481264861], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -1.03256 * Year + 2090.18<br>R<sup>2</sup>=0.726731<br><br>Entity=East Asia & Pacific<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "East Asia & Pacific", "marker": {"color": "#1f77b4", "symbol": "circle"}, "mode": "lines", "name": "East Asia & Pacific", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [25.05368956898701, 19.890869898512847, 14.728050228038683, 9.565230557564519], "yaxis": "y"}, {"hovertemplate": "Entity=Latin America & Caribbean<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Latin America & Caribbean", "marker": {"color": "#ff7f0e", "symbol": "circle"}, "mode": "markers", "name": "Latin America & Caribbean", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [38.670458404188, 25.1445935231851, 14.409068659648499, 10.0267639011859], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -1.93333 * Year + 3903.23<br>R<sup>2</sup>=0.955938<br><br>Entity=Latin America & Caribbean<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "Latin America & Caribbean", "marker": {"color": "#ff7f0e", "symbol": "circle"}, "mode": "lines", "name": "Latin America & Caribbean", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [36.56271237793271, 26.8960515406784, 17.229390703424087, 7.56272986617023], "yaxis": "y"}, {"hovertemplate": "Entity=Sub-Saharan Africa<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Sub-Saharan Africa", "marker": {"color": "#7f7f7f", "symbol": "circle"}, "mode": "markers", "name": "Sub-Saharan Africa", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [422.510846603664, 354.42414590391996, 293.211683139294, 234.292104885826], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -12.5174 * Year + 25454.7<br>R<sup>2</sup>=0.998875<br><br>Entity=Sub-Saharan Africa<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "Sub-Saharan Africa", "marker": {"color": "#7f7f7f", "symbol": "circle"}, "mode": "lines", "name": "Sub-Saharan Africa", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [419.9899983208852, 357.4031295290697, 294.81626073725783, 232.22939194544597], "yaxis": "y"}, {"hovertemplate": "Entity=Fragile and conflict affected situations<br>Year=%{x}<br>Incidence=%{y}<extra></extra>", "legendgroup": "Fragile and conflict affected situations", "marker": {"color": "#bcbd22", "symbol": "circle"}, "mode": "markers", "name": "Fragile and conflict affected situations", "orientation": "v", "showlegend": true, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [319.032295012843, 304.801393322231, 247.498297756514, 180.36984225111198], "yaxis": "y"}, {"hovertemplate": "<b>OLS trendline</b><br>Incidence = -9.46581 * Year + 19265.5<br>R<sup>2</sup>=0.936863<br><br>Entity=Fragile and conflict affected situations<br>Year=%{x}<br>Incidence=%{y} <b>(trend)</b><extra></extra>", "legendgroup": "Fragile and conflict affected situations", "marker": {"color": "#bcbd22", "symbol": "circle"}, "mode": "lines", "name": "Fragile and conflict affected situations", "showlegend": false, "type": "scatter", "x": [2000, 2005, 2010, 2015], "xaxis": "x", "y": [333.9190251633081, 286.58997977821855, 239.260934393129, 191.93188900803943], "yaxis": "y"}],
+                        {"legend": {"title": {"text": "Entity"}, "tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"text": "Incidence interactive plot of Malaria in different continents and special regions"}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "Year"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "Incidence"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('67435dc2-1a40-4ff7-b19c-4dfa41ebb2d3');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                });
+            </script>
+        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="We-have-looked-at-how-malaria-incidence-changes-in-the-most-populated-countries,-different-continents-and-special-region.">We have looked at how malaria incidence changes in the most populated countries, different continents and special region.<a class="anchor-link" href="#We-have-looked-at-how-malaria-incidence-changes-in-the-most-populated-countries,-different-continents-and-special-region."> </a></h3><h3 id="Now-let's-see-which-country/continent-or-region-has-the-most-deaths-over-the-years.">Now let's see which country/continent or region has the most deaths over the years.<a class="anchor-link" href="#Now-let's-see-which-country/continent-or-region-has-the-most-deaths-over-the-years."> </a></h3><h3 id="Since-there-are-a-few-na-values,-we-fill-them-forward-and-backward-to-ensure-better-fit.">Since there are a few na values, we fill them forward and backward to ensure better fit.<a class="anchor-link" href="#Since-there-are-a-few-na-values,-we-fill-them-forward-and-backward-to-ensure-better-fit."> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">malaria_deaths</span><span class="p">,</span> <span class="n">malaria_inc</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span>
+        <span class="n">left_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Entity&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">right_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Entity&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span>
+<span class="n">df_merged</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Deaths - Malaria - Sex: Both - Age: Age-standardized (Rate) (per 100,000 people)&#39;</span><span class="p">:</span><span class="s1">&#39;Deaths&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;Incidence of malaria (per 1,000 population at risk) (per 1,000 population at risk)&#39;</span><span class="p">:</span><span class="s1">&#39;Incidence&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_merged</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">ffill</span><span class="p">()</span><span class="o">.</span><span class="n">bfill</span><span class="p">()</span>
+<span class="n">df_merged_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_merged</span><span class="p">,</span> <span class="n">malaria_deaths_age</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Entity&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">right_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Entity&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span>
+<span class="n">df_merged_all</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;deaths&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Entity</th>
+      <th>Code_x</th>
+      <th>Year</th>
+      <th>Deaths</th>
+      <th>Code_y</th>
+      <th>Incidence</th>
+      <th>code</th>
+      <th>age_group</th>
+      <th>deaths</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>25840</th>
+      <td>Sub-Saharan Africa</td>
+      <td>LKA</td>
+      <td>2001</td>
+      <td>95.387495</td>
+      <td>LKA</td>
+      <td>422.510847</td>
+      <td>NaN</td>
+      <td>Under 5</td>
+      <td>677487.264137</td>
+    </tr>
+    <tr>
+      <th>30280</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1998</td>
+      <td>13.962049</td>
+      <td>VNM</td>
+      <td>0.300000</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>681065.266685</td>
+    </tr>
+    <tr>
+      <th>25875</th>
+      <td>Sub-Saharan Africa</td>
+      <td>LKA</td>
+      <td>2008</td>
+      <td>81.837780</td>
+      <td>LKA</td>
+      <td>354.424146</td>
+      <td>NaN</td>
+      <td>Under 5</td>
+      <td>685669.900363</td>
+    </tr>
+    <tr>
+      <th>30335</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>2009</td>
+      <td>13.383327</td>
+      <td>OWID_WRL</td>
+      <td>141.256696</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>688065.379789</td>
+    </tr>
+    <tr>
+      <th>25845</th>
+      <td>Sub-Saharan Africa</td>
+      <td>LKA</td>
+      <td>2002</td>
+      <td>95.496177</td>
+      <td>LKA</td>
+      <td>422.510847</td>
+      <td>NaN</td>
+      <td>Under 5</td>
+      <td>689351.595969</td>
+    </tr>
+    <tr>
+      <th>25870</th>
+      <td>Sub-Saharan Africa</td>
+      <td>LKA</td>
+      <td>2007</td>
+      <td>85.007071</td>
+      <td>LKA</td>
+      <td>354.424146</td>
+      <td>NaN</td>
+      <td>Under 5</td>
+      <td>689897.819960</td>
+    </tr>
+    <tr>
+      <th>25860</th>
+      <td>Sub-Saharan Africa</td>
+      <td>LKA</td>
+      <td>2005</td>
+      <td>90.986663</td>
+      <td>LKA</td>
+      <td>354.424146</td>
+      <td>NaN</td>
+      <td>Under 5</td>
+      <td>694321.203817</td>
+    </tr>
+    <tr>
+      <th>25865</th>
+      <td>Sub-Saharan Africa</td>
+      <td>LKA</td>
+      <td>2006</td>
+      <td>87.699550</td>
+      <td>LKA</td>
+      <td>354.424146</td>
+      <td>NaN</td>
+      <td>Under 5</td>
+      <td>695767.937767</td>
+    </tr>
+    <tr>
+      <th>30285</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1999</td>
+      <td>14.271505</td>
+      <td>VNM</td>
+      <td>0.300000</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>698846.092898</td>
+    </tr>
+    <tr>
+      <th>25855</th>
+      <td>Sub-Saharan Africa</td>
+      <td>LKA</td>
+      <td>2004</td>
+      <td>93.839664</td>
+      <td>LKA</td>
+      <td>422.510847</td>
+      <td>NaN</td>
+      <td>Under 5</td>
+      <td>702419.646809</td>
+    </tr>
+    <tr>
+      <th>30290</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>2000</td>
+      <td>14.417081</td>
+      <td>OWID_WRL</td>
+      <td>158.124351</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>705882.728782</td>
+    </tr>
+    <tr>
+      <th>25850</th>
+      <td>Sub-Saharan Africa</td>
+      <td>LKA</td>
+      <td>2003</td>
+      <td>96.281593</td>
+      <td>LKA</td>
+      <td>422.510847</td>
+      <td>NaN</td>
+      <td>Under 5</td>
+      <td>706059.061884</td>
+    </tr>
+    <tr>
+      <th>30330</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>2008</td>
+      <td>14.097223</td>
+      <td>OWID_WRL</td>
+      <td>141.256696</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>719208.349156</td>
+    </tr>
+    <tr>
+      <th>30325</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>2007</td>
+      <td>14.399868</td>
+      <td>OWID_WRL</td>
+      <td>141.256696</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>726367.804598</td>
+    </tr>
+    <tr>
+      <th>30295</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>2001</td>
+      <td>14.854815</td>
+      <td>OWID_WRL</td>
+      <td>158.124351</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>728254.356956</td>
+    </tr>
+    <tr>
+      <th>30320</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>2006</td>
+      <td>14.672998</td>
+      <td>OWID_WRL</td>
+      <td>141.256696</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>734869.501103</td>
+    </tr>
+    <tr>
+      <th>30315</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>2005</td>
+      <td>14.893298</td>
+      <td>OWID_WRL</td>
+      <td>141.256696</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>735966.857064</td>
+    </tr>
+    <tr>
+      <th>30300</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>2002</td>
+      <td>15.038252</td>
+      <td>OWID_WRL</td>
+      <td>158.124351</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>737466.128811</td>
+    </tr>
+    <tr>
+      <th>30310</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>2004</td>
+      <td>15.144038</td>
+      <td>OWID_WRL</td>
+      <td>158.124351</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>746365.808630</td>
+    </tr>
+    <tr>
+      <th>30305</th>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>2003</td>
+      <td>15.308365</td>
+      <td>OWID_WRL</td>
+      <td>158.124351</td>
+      <td>OWID_WRL</td>
+      <td>Under 5</td>
+      <td>752025.548675</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="After-merging-all-the-datasets-together-and-sorted-them:">After merging all the datasets together and sorted them:<a class="anchor-link" href="#After-merging-all-the-datasets-together-and-sorted-them:"> </a></h3><h3 id="We-can-tell-that-Sub-Saharan-Africa-has-the-most-deaths-of-malaria-over-the-years">We can tell that Sub-Saharan Africa has the most deaths of malaria over the years<a class="anchor-link" href="#We-can-tell-that-Sub-Saharan-Africa-has-the-most-deaths-of-malaria-over-the-years"> </a></h3><h3 id="Now-let's-see-how-many-people-of-each-age-groups-have-died-in-Sub-Saharan-Africa-from-1990-to-2015.">Now let's see how many people of each age groups have died in Sub-Saharan Africa from 1990 to 2015.<a class="anchor-link" href="#Now-let's-see-how-many-people-of-each-age-groups-have-died-in-Sub-Saharan-Africa-from-1990-to-2015."> </a></h3><h3 id="This-is-an-area-plot-which-I-think-perfectly-shows-the-distribution-of-deaths-from-different-age-groups-in-Sub-Saharan-Africa-from-1990-to-2015.">This is an area plot which I think perfectly shows the distribution of deaths from different age groups in Sub-Saharan Africa from 1990 to 2015.<a class="anchor-link" href="#This-is-an-area-plot-which-I-think-perfectly-shows-the-distribution-of-deaths-from-different-age-groups-in-Sub-Saharan-Africa-from-1990-to-2015."> </a></h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_merged_all_ssa</span><span class="o">=</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_merged_all</span><span class="p">[</span><span class="n">df_merged_all</span><span class="o">.</span><span class="n">Entity</span> <span class="o">==</span> <span class="s2">&quot;Sub-Saharan Africa&quot;</span><span class="p">]]))</span>
+<span class="n">df_merged_all_ssa</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">fig_ssa</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">area</span><span class="p">(</span><span class="n">df_merged_all_ssa</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;deaths&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;age_group&quot;</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+                     <span class="s2">&quot;age_group&quot;</span><span class="p">:</span> <span class="s2">&quot;Different age groups&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;Year&quot;</span><span class="p">:</span> <span class="s2">&quot;Sub-Saharan Africa (1990 to 2015)&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;deaths&quot;</span><span class="p">:</span> <span class="s2">&quot;Total Deaths Count Due To Malaria&quot;</span>
+                 <span class="p">},</span>
+                <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Malaria deaths count in Sub-Saharan Africa over time measured by area &quot;</span><span class="p">)</span>
+<span class="n">fig_ssa</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+        
+        
+            <div id="11e88935-2125-4888-92e9-963af14963ca" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                require(["plotly"], function(Plotly) {
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("11e88935-2125-4888-92e9-963af14963ca")) {
+                    Plotly.newPlot(
+                        '11e88935-2125-4888-92e9-963af14963ca',
+                        [{"hovertemplate": "Different age groups=Under 5<br>Sub-Saharan Africa (1990 to 2015)=%{x}<br>Total Deaths Count Due To Malaria=%{y}<extra></extra>", "legendgroup": "Under 5", "line": {"color": "#636efa"}, "mode": "lines", "name": "Under 5", "orientation": "v", "showlegend": true, "stackgroup": "1", "type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], "xaxis": "x", "y": [530886.437699, 547514.480929, 559222.895958, 573531.825606, 584173.288511, 595837.317384, 606553.8906729999, 613714.327819, 631795.7695060001, 648244.513167, 653825.845675, 677487.264137, 689351.5959689999, 706059.061884, 702419.646809, 694321.203817, 695767.937767, 689897.81996, 685669.900363, 656467.377241, 627216.791896, 591603.0252319999, 550620.301928, 532234.075008, 514454.281362, 493955.12098999997, 491915.086424], "yaxis": "y"}, {"hovertemplate": "Different age groups=70 or older<br>Sub-Saharan Africa (1990 to 2015)=%{x}<br>Total Deaths Count Due To Malaria=%{y}<extra></extra>", "legendgroup": "70 or older", "line": {"color": "#EF553B"}, "mode": "lines", "name": "70 or older", "orientation": "v", "showlegend": true, "stackgroup": "1", "type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], "xaxis": "x", "y": [11936.1295217, 12836.5989752, 13224.409290000001, 13908.5917259, 14536.105357799997, 15268.374365799998, 16118.3185648, 16601.615554, 17546.308413299997, 18027.688614099996, 18595.9303063, 19814.480905599998, 20688.8843795, 21887.961251400004, 22240.659099599998, 22493.392928999998, 22040.0286876, 22231.806669999998, 22026.0645233, 21363.324983900002, 21049.5580426, 20136.6550126, 19738.814505500002, 19374.3276021, 19666.687204700003, 19909.918099900002, 20018.184006], "yaxis": "y"}, {"hovertemplate": "Different age groups=5-14<br>Sub-Saharan Africa (1990 to 2015)=%{x}<br>Total Deaths Count Due To Malaria=%{y}<extra></extra>", "legendgroup": "5-14", "line": {"color": "#00cc96"}, "mode": "lines", "name": "5-14", "orientation": "v", "showlegend": true, "stackgroup": "1", "type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], "xaxis": "x", "y": [43954.0104834, 46213.072994099995, 47693.215495599994, 50522.7086398, 51815.5706602, 53279.1547446, 55077.5970572, 56986.3900473, 59409.088424199996, 61464.109437800005, 62809.883785599995, 66252.6240717, 69271.2729701, 71593.9300675, 71884.1265475, 72684.17749339998, 71573.522832, 71279.1249975, 71180.9039295, 67794.8275893, 64299.381352100005, 60866.75477130001, 57186.8066862, 54562.15055680001, 54470.121083800004, 52520.3956094, 52349.1940557], "yaxis": "y"}, {"hovertemplate": "Different age groups=15-49<br>Sub-Saharan Africa (1990 to 2015)=%{x}<br>Total Deaths Count Due To Malaria=%{y}<extra></extra>", "legendgroup": "15-49", "line": {"color": "#ab63fa"}, "mode": "lines", "name": "15-49", "orientation": "v", "showlegend": true, "stackgroup": "1", "type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], "xaxis": "x", "y": [28285.439787900003, 30535.216629900002, 31559.099525999998, 33101.35252479999, 34648.1889175, 36637.7105812, 38843.3627511, 40060.0157171, 42635.741466800006, 44719.369758199995, 46726.3918917, 49725.0286832, 51844.198284, 54755.0723853, 55300.9204757, 55549.3748023, 53998.9580625, 54096.8038405, 52673.98699609999, 50655.979659699995, 49723.406010900006, 47340.2738134, 46153.3787727, 45518.5438298, 46273.574051999996, 47111.3744206, 47460.9602644], "yaxis": "y"}, {"hovertemplate": "Different age groups=50-69<br>Sub-Saharan Africa (1990 to 2015)=%{x}<br>Total Deaths Count Due To Malaria=%{y}<extra></extra>", "legendgroup": "50-69", "line": {"color": "#FFA15A"}, "mode": "lines", "name": "50-69", "orientation": "v", "showlegend": true, "stackgroup": "1", "type": "scatter", "x": [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], "xaxis": "x", "y": [19938.5784068, 21180.2364741, 21651.4105183, 22588.7437627, 23469.873294, 24609.632658500002, 25748.9509539, 26262.0633733, 27624.602727900005, 28264.143101999998, 29127.0131972, 30742.319947900003, 31917.5582677, 33593.84371, 33980.235133, 34264.8841106, 33275.4279686, 33443.004694200004, 32882.3451135, 31695.3493559, 31075.6751278, 29476.347549500002, 28677.1114708, 28147.20141, 28615.690701599997, 29085.542317000003, 29242.7555699], "yaxis": "y"}],
+                        {"legend": {"title": {"text": "Different age groups"}, "tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"text": "Malaria deaths count in Sub-Saharan Africa over time measured by area "}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "Sub-Saharan Africa (1990 to 2015)"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "Total Deaths Count Due To Malaria"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('11e88935-2125-4888-92e9-963af14963ca');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                });
+            </script>
+        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/yz628-823-blog/2021/09/30/Yiyang-Zhang-823-HW3-Creating-effective-visualizations.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/yz628-823-blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/yz628-823-blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/yz628-823-blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/yz628-823-blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/yz628-823-blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
